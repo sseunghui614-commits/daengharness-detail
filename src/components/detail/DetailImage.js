@@ -19,13 +19,8 @@ const DetailImage = () => {
         21: detailC, // 대형견
         11: detailD, // 목편한형
         };
-        return map[idNum] ?? detailB; // fallback: 기본형
+        return map[idNum] || detailB; // fallback: 기본형
     }, [idNum]);
-    console.log(
-    "params:", useParams(),
-    "idNum:", idNum,
-    "detailSrc:", detailSrc
-);
     return (
         <section className="detail-long-image">
         <img src={detailSrc} alt="상세페이지 이미지" />
