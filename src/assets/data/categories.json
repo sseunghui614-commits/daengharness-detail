@@ -1,0 +1,26 @@
+{
+  "Categorys":["의류형","기본형","목편한형","대형견추천용"],
+  "CategoryName":
+  [
+    {
+      "id":1,
+      "title":"의류형",
+      "img":"/images/C-harness/Ctype3-1.png"
+    },
+    {
+      "id":2,
+      "title":"기본형",
+      "img":"/images/Harness/Htype3-1.png"
+    },
+    {
+    "id":3,
+    "title":"목편한형",
+    "img":"/images/Harness/Ytype2-1.png"
+    },
+    {
+    "id":3,
+    "title":"대형견추천용",
+    "img":"/images/Harness/Ytype1-1.png"
+    }
+  ]
+}

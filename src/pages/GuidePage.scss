@@ -1,0 +1,153 @@
+@use "../assets/scss/mixins" as *;
+
+
+
+#guide-page {
+    text-align: center;   
+    @include flex-layout(column, space-between, center); 
+    .guide-h-imgs{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        padding: 2rem 0;
+        .guide-image {
+            max-width: 150px;
+            height: auto; 
+            margin-bottom: 1.5rem;
+            border-radius: 1rem; 
+            object-fit: contain; 
+        }
+        .h-btn{
+            padding:3rem 4rem;
+            font-size: 36px;
+            font-weight: bolder;
+            border-style: none;
+            color: var(--white);
+            background-color: var(--main-yellow);
+            border-radius: 4rem;
+            width: 100%;
+            max-width:50rem; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center; 
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+    //------------------------------------------------------
+    .guide-y-imgs{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        padding: 2rem 0;
+        .guide-image {
+            max-width: 150px;
+            height: auto; 
+            margin-bottom: 1.5rem;
+            border-radius: 1rem; 
+            object-fit: contain; 
+        }
+        .y-btn{
+            padding:3rem 4rem;
+            font-size: 36px;
+            font-weight: bolder;
+            border-style: none;
+            color: var(--white);
+            background-color: var(--green);
+            border-radius: 4rem;
+            width: 100%;
+            max-width:50rem; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center; 
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+        //------------------------------------------------------
+    .guide-b-imgs{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        padding: 2rem 0;
+        .guide-image {
+            max-width: 150px;
+            height: auto; 
+            margin-bottom: 1.5rem;
+            border-radius: 1rem; 
+            object-fit: contain; 
+        }
+        .b-btn{
+            padding:3rem 4rem;
+            font-size: 36px;
+            font-weight: bolder;
+            border-style: none;
+            color: var(--white);
+            background-color: var(--light-blue);
+            border-radius: 4rem;
+            width: 100%;
+            max-width:50rem; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center; 
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+        //------------------------------------------------------
+    .guide-op-imgs{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+
+        width: 100%;
+        padding: 2rem 0;
+        .guide-image {
+            max-width: 150px;
+            height: auto; 
+            margin-bottom: 1.5rem;
+            border-radius: 1rem; 
+            object-fit: contain; 
+        }
+        .op-btn{
+            padding:3rem 4rem;
+            font-size: 36px;
+            font-weight: bolder;
+            border-style: none;
+            color: var(--white);
+            background-color: var(--pink);
+            border-radius: 4rem;
+            width: 100%;
+            max-width:50rem; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center; 
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
+        }
+    }
+    @include mobile {
+    img{
+        width: 769px;
+    }
+    }
+}

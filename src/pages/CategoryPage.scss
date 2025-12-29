@@ -1,0 +1,217 @@
+@use '../assets/scss/variables' as * ;
+@use '../assets/scss/fonts' as * ;
+@use '../assets/scss/mixins' as * ;
+
+.best-hcolor{
+  color: var(--main-yellow);
+}
+.hbottomLine{
+  border-top: 2px dashed var(--light-yellow);
+  border-bottom: 2px dashed var(--light-yellow);
+}
+.best-Ycolor{
+  color: var(--green);
+}
+.YbottomLine{
+  border-top: 2px dashed var(--hover-light-green);
+  border-bottom: 2px dashed var(--hover-light-green);
+}
+.best-Lcolor{
+  color: var(--color-deep-blue);
+}
+.LbottomLine{
+  border-top: 2px dashed var(--hover-extra-light-blue);
+  border-bottom: 2px dashed var(--hover-extra-light-blue);
+}
+.best-Ccolor{
+  color: var(--pink);
+}
+.CbottomLine{
+  border-top: 2px dashed var(--hover-soft-pink);
+  border-bottom: 2px dashed var(--hover-soft-pink);
+}
+
+
+#category-page {
+  background-color: c;
+  width: 100%;
+  background-color: var(--bg);
+  .category-wrap {
+    margin: auto;
+    max-width: 1440px;
+    .category-top {
+      div {
+        @include desktop{
+        height: 1120px;
+        }
+        @include mobile{
+          height: 60vh;
+          }
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        }
+      div.categoryImgH{
+        background-image: url(../assets/images/Grid/Gridimage-H.png);
+      }
+      div.categoryImgY{
+        background-image: url(../assets/images/Grid/Gridimage-Y.png);
+      }
+      div.categoryImgL{
+        background-image: url(../assets/images/Grid/Gridimage-L.png);
+      }
+      div.categoryImgC{
+        background-image: url(../assets/images/Grid/Gridimage-C.png);
+      }
+    }
+    .category-best {
+      width: 100%;
+      margin: 2rem 0;
+      p {
+        @include font-title-2 ;
+        margin: 5rem 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 64px;
+      }
+      .cetegory-bestlist{
+        @include desktop{
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;}
+      @include mobile{
+      width: 100%;
+      display: flex;
+      // justify-content: center;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+      padding: 0 5vw;
+      gap: 12px;
+      &::-webkit-scrollbar {
+      display: none;
+      }
+      .best-slide-item {
+        display: flex;
+    flex: 0 0 80%; 
+    justify-content: center;
+    scroll-snap-align: center;
+    }
+    }
+    
+      .category-prodtag {
+        @include desktop{
+        width: 350px;
+        height: 400px;
+        }
+        @include mobile{
+          width: 50vw;
+        }
+        cursor: pointer;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        background-color: var(--soft-beige);
+        margin-bottom: 5rem;
+        box-shadow: 0px 4px 4px #464d40;
+        transition: 0.5s;
+        .card-top {
+          width: 100%;
+          height: 80%;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem 1rem 0 0;
+          }
+        }
+        @include desktop{
+        &:hover{
+          transform: scale(1.1);
+        }
+        }
+        }
+        .card-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.7rem;p {
+            margin: 0;
+            text-align: left;
+            font-size: 16px;
+            @include font-s-2 ;
+          }
+        }
+      }
+    }
+    
+    .category-prod {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 3rem;
+      .prod-item {
+        will-change: transform, opacity;
+        }
+      .category-prodtag {
+        cursor: pointer;
+        transition: 0.5s;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        margin: 1.5rem;
+        width: 300px;
+        height: 350px;
+        background-color: var(--soft-beige);
+        .card-top {
+          position: relative;
+          width: 100%;
+          height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            position: absolute;
+            border-radius: 1rem 1rem 0 0;
+            width: 100%;
+            height: 100%;
+          }
+          .soldout-img{
+            z-index: 10;
+            &:hover{
+              content: url(../assets/images/Grid/Soldout-2.png);
+            }
+          }
+        }
+        .card-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.7rem;
+          p {
+            @include font-s-3 ;
+            margin: 0;
+            text-align: left;
+            font-size: 12px;
+            margin-top: 0.5rem;
+            
+          }
+        }
+      }
+    }
+    .info-text{
+      p{
+      text-align: center;
+      
+      padding: 3rem;
+      word-spacing : 0.3rem;
+      letter-spacing: 0.2rem;
+      @include font-h2-1 ;
+      font-size: 16px;
+      }
+    }
+  }
+}

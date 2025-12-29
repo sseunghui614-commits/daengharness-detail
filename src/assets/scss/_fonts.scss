@@ -1,0 +1,55 @@
+
+
+@font-face {
+  font-family: 'SeoulNotice';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SeoulNotice';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SeoulNotice';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SeoulNotice';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/SeoulAlrimTTF-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+@mixin font-style($size,$weight){
+  font-size: $size;
+  font-weight: $weight;
+}
+//폰트
+@mixin font-title-1 {
+  @include font-style(4rem, 800);
+}
+@mixin font-title-2 {
+  @include font-style(4rem, 900);
+}
+@mixin font-h2-1 {
+  @include font-style(1.8rem, 500);
+}
+@mixin font-h2-2 {
+  @include font-style(1.8rem, 800);
+}
+@mixin font-s-1 {
+  @include font-style(1.5rem, 800);
+}
+@mixin font-s-2 {
+  @include font-style(1rem, 800);
+}
+@mixin font-s-3 {
+  @include font-style(0.75rem, 700);
+}

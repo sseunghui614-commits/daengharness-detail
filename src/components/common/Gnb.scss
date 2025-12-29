@@ -1,0 +1,65 @@
+@use '../../assets/scss/mixins' as *;
+@use '../../assets/scss/fonts' as *;
+
+nav {
+    position: relative;
+    padding: 0.2rem;
+            img{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .mobile-menu {
+            display: none;  
+            position: fixed;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 330px;
+            background-color: var(--white);
+            border: 2px solid var(--main-yellow);
+            padding: 1rem;   
+            z-index: 99;         
+        &.open {
+            display: block;              
+            
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        li {
+            margin-bottom: 3rem;
+            cursor: pointer;
+            border-bottom: 3px dotted var(--soft-beige);
+            padding-bottom: 4px;
+            @include font-s-2;
+            color: var(--dark-brown);
+            }
+        }
+    }
+}
+/* 모바일 화면에서만 햄버거 버튼 보이게 */
+@media (max-width: $mobile) {
+  div[style*="cursor: pointer"] {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* 데스크탑 화면에서는 메뉴 바로 노출, 햄버거 숨기기 */
+@media (min-width:  $mobile) {
+  div[style*="cursor: pointer"] {
+    display: none;
+
+
+  .mobile-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+}
+  }

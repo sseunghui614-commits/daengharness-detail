@@ -1,0 +1,22 @@
+@import "../../assets/scss/mixins.scss";
+
+.detail-long-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // padding: 0 16px; 
+}
+
+.detail-long-image img {
+    width: 100%;
+    max-width: 768px; // ✅ 피그마 기준 고정
+    height: auto;
+    display: block;
+}
+
+/* 데스크탑(1440 이상)에서 여백 좀 더 */
+@include desktop {
+    .detail-long-image {
+        // padding: 0 24px;
+    }
+}

@@ -1,0 +1,123 @@
+@use "../../assets/scss/fonts" as *;
+
+.detail-review {
+    width: 100%;
+    padding: 96px 0; 
+    background: #fff;
+}
+
+.detail-review-wrap {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.detail-review-title {
+    font-size: 38px; 
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+}
+
+/* 리스트 간격 */
+.detail-review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/*카드 하나 */
+.detail-review-item {
+    background: #fff;
+    border: 1px solid #ececec;      
+    border-radius: 16px;
+    padding: 26px 28px;              
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* 상품명 */
+.detail-review-prod {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* 별점 */
+.detail-review-star {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;      
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 14px;
+}
+
+.detail-review-star .star {
+    font-size: 18px;      
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #f5b301;
+    line-height: 1;
+}
+
+/* 본문 */
+.detail-review-text {
+font-size: 16px;
+line-height: 1.9;
+color: #222;
+margin-bottom: 14px;
+white-space: pre-line;
+}
+
+/* 구매일 */
+.detail-review-date {
+font-size: 13px;
+font-weight: 600;
+color: #777;
+}
+
+/* 카드 안에 얇은 구분선(레퍼런스처럼 정보 분리 느낌) */
+.detail-review-text::after {
+content: "";
+display: block;
+height: 1px;
+background: #f0f0f0;
+margin-top: 18px;
+}
+
+/* 구매일을 라인 밑으로 자연스럽게 */
+.detail-review-date {
+padding-top: 14px;
+}
+
+/* ✅ 반응형 */
+@media (max-width: 768px) {
+.detail-review {
+    padding: 72px 0;
+}
+
+.detail-review-title {
+    font-size: 32px;
+}
+
+.detail-review-item {
+    padding: 22px 18px;
+    border-radius: 14px;
+}
+
+.detail-review-prod {
+    font-size: 18px;
+}
+
+.detail-review-text {
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.detail-review-star .star {
+    font-size: 17px;
+}
+}

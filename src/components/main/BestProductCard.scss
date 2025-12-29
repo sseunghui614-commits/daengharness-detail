@@ -1,0 +1,57 @@
+@use '../../assets/scss/mixins' as *;
+@use '../../assets/scss/fonts' as *;
+
+.best-product-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+
+    .bst-prod-cd-btn {
+        @include btn-style(var(--hover-light-blue),
+            var(--color-deep-blue));
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        font-size: 1rem;
+        transform: translateX(-50%);
+        width: 70%;
+        text-align: center;
+        // padding: 0.5rem 1.5rem;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+
+    .bst-cd-img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+                transition: 0.3s;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .imgHover {
+            position: absolute;
+                transition: 0.3s;
+
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        &:hover {
+            .imgHover {
+                opacity: 1;
+            }
+        }
+    }
+}

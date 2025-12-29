@@ -1,0 +1,42 @@
+// 반응형  breakpoints
+$desktop : 769px;
+$mobile : 768px;
+// 반응형 처리
+@mixin desktop{
+  @media all and (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin mobile{
+    @media all and (max-width:$mobile){
+        @content;
+    }
+}
+
+// 버튼 처리
+@mixin btn-style($color,$hover){
+  background-color: $color;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover{
+    background-color: $hover;
+  }
+}
+
+// 레이아웃 플렉스
+@mixin flex-layout($dir:row,$just:center,$align:center,$gap:1rem){
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}
+
+// $fw-medium: 500;
+// $fw-bold: 700;
+// $fw-extrabold: 800;
+// $fw-heavy: 900;

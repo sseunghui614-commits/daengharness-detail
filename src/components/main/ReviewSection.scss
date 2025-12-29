@@ -1,0 +1,57 @@
+@use '../../assets/scss/mixins' as *;
+@use '../../assets/scss/fonts' as *;
+
+
+.review-section {
+    background: var(--green);
+    padding: 80px 0;
+}
+
+.review-wrap {
+    // max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.re-title {
+    text-align: center;
+    color: var(--dark-brown);
+    margin-bottom: 6rem;
+
+    p {
+        @include font-title-2;
+        span {
+            color: var(--main-yellow);
+        }
+    }
+}
+
+/* ✅ 보이는 영역(마스크) */
+.review-list {
+    overflow: hidden;
+}
+
+/* ✅ 움직이는 트랙 */
+.review-track {
+    display: flex;
+    gap: 2.5rem;
+    width: max-content;
+
+    /* 오른쪽으로 흐르게 하고 싶으면 -50% -> 0% */
+    animation: review-marquee 40s linear infinite;
+}
+
+/* 마우스 올리면 멈춤(선택) */
+.review-list:hover .review-track {
+    animation-play-state: paused;
+}
+
+@keyframes review-marquee {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

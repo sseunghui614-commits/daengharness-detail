@@ -1,0 +1,13 @@
+@use '../../assets/scss/mixins' as *;
+@use '../../assets/scss/fonts' as *;
+
+#sec-best {
+    width: 100%;
+
+    .bst-cd-sec-list {
+        @include flex-layout($just: space-around, $align: center);
+        max-width: 1120px;
+        margin: 0 auto;
+        transform: translateY(-50%);
+    }
+}

@@ -1,0 +1,73 @@
+@use '../../assets/scss/mixins' as *;
+@use '../../assets/scss/fonts' as *;
+
+.header{
+    background-color:var(--white) ;
+    @include flex-layout(row, space-between, flex-start);
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden; 
+        @include mobile{
+            padding: 0 2rem;
+        }
+    .header-menu{
+        width: 100%;
+        @include flex-layout(row, space-between, center);
+        .logo{
+            display: flex;
+            img{
+                width: auto;
+                height: 5rem;
+                @include mobile{
+                    display: none;
+                }
+            }
+
+        }
+        .menu-list{
+            margin:auto 3rem;
+            display: flex;
+            text-align: center;
+            gap: 12rem; 
+            font-size: 24px;
+            color: var(--color-deep-blue);
+            @include font-s-1;
+            @include mobile {
+                display: none;
+            }
+        }
+        .icon-group{
+            display: flex;
+            gap:2rem;
+            cursor: pointer;
+            @include mobile {
+                display: none;
+                    }
+            img{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        .mobile-top{
+            display: none;
+            @include mobile{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                > img{
+                    width: auto;
+                    height: 4rem;
+                }
+            }
+            .right{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                img{
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use '../../assets/scss/mixins' as *;
+@use '../../assets/scss/fonts' as *;
+
+.review-item {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-text {
+    font-weight: 500;
+    line-height: 1.5rem;
+
+    /* 텍스트 길면 3줄까지만 */
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.review-prod {
+    font-weight: 800;
+    margin: 10px 0 6px;
+    font-size: 0.95rem;
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    opacity: 0.8;
+
+    .review-star {
+        color: var(--light-yellow);
+    }
+}
