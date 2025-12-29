@@ -23,12 +23,6 @@ const LifestyleVideoSection = () => {
                 width: '80%',
                 height: '80vh',
                 borderRadius: '4rem'
-            })
-            .to('h2', {
-                opacity: 0
-            }, "<")
-            .to('.video-txt', {
-                opacity: 0.7
             });
 
         //scrolltrigger 등록
