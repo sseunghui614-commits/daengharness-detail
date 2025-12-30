@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Layout from "./layout/Layout"
@@ -12,7 +12,7 @@ import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   return (        
-    <BrowserRouter>
+    <HashRouter>
     <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -38,7 +38,7 @@ const App = () => {
           />
           </Route>    
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
